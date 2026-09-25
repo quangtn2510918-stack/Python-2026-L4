@@ -1,0 +1,100 @@
+1. 
+radius = float(input("Enter circle radius? "))
+
+area = 3.14 * (radius ** 2)
+print(f"Circle area = {area}")
+
+2. 
+
+
+celsius = float(input("Enter the temperature in Celsius? "))
+fahrenheit = (celsius * 9/5) + 32
+
+print(f"{int(celsius) if celsius.is_integer() else celsius} (C) = {fahrenheit} (F)")
+
+3. 
+
+
+num = int(input("Enter a number? "))
+is_prime = True
+
+if num <= 1:
+    is_prime = False
+else:
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+
+if is_prime:
+    print(f"{num} is a prime number")
+else:
+    print(f"{num} is a NOT prime number")
+
+4. 
+num = int(input("Enter a number? "))
+divisors_sum = 0
+
+for i in range(1, num):
+    if num % i == 0:
+        divisors_sum += i
+
+if divisors_sum == num and num != 0:
+    print(f"{num} is a perfect number")
+else:
+    print(f"{num} is a NOT perfect number")
+5. 
+
+color_list = ["Blue", "Yellow", "Black", "Red", "White"]
+color = input("What is your favorite color? ")
+
+if color in color_list:
+    print(f"Your color is at index {color_list.index(color)} in my list")
+else:
+    print("Sorry, I could not find your color")
+6. 
+range1 = list(range(7))
+print("range1", str(range1)[1:-1])
+
+range2 = list(range(1, 11, 3))
+print("range2", str(range2)[1:-1])
+
+range3 = list(range(5, 0, -1))
+print("range3", str(range3)[1:-1])
+
+range4 = list(range(6, -3, -2))
+print("range4", str(range4)[1:-1])
+7. 
+def remove_dollar_sign(s):
+    return s.replace("$", "")
+8. 
+def extract_even(l):
+    return [num for num in l if num % 2 == 0]
+9. 
+def calculate_factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    factorial = 1
+    for i in range(2, n + 1):
+        factorial *= i
+    return factorial
+10.
+def get_divisors(n):
+    divisors = []
+    for i in range(1, n + 1):
+        if n % i == 0:
+            divisors.append(i)
+    return divisors
+11. 
+def compute_distance(x1, y1, x2, y2):
+    return ((x2 - x1)**2 + (y2 - y1)**2) ** 0.5
+12. 
+def print_pattern(m, n):
+    for i in range(m):
+        if i == 0 or i == m - 1:
+            
+            print("* " * n)
+        else:
+            
+            print("*" + " " * (2 * n - 3) + "*")
+
